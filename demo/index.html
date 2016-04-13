@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo app</title>
+    </head>
+    <body>
+        <div class="container"></div>
+        <script src="dist/Foo.js"></script>
+        <script>
+            var foo = new Foo.default('demo');
+            document.querySelector('.container').textContent = foo.greet();
+        </script>
+    </body>
+</html>
