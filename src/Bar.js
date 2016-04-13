@@ -1,15 +1,11 @@
-import { stub } from 'mocktail';
+const strings = ['Welcome', 'Willkommen', 'Bienvenue'];
+const pickOneOutOfThree = () => Math.floor(Math.random(0, 2) * 3);
 
 /**
  * Class Bar. Does things
  * @param {String} name
  */
-
-const strings = ['Welcome', 'Willkommen', 'Bienvenue'];
-
-const pickOneOutOfThree = () => Math.floor(Math.random(0, 2) * 3);
-
-class Bar {
+export default class Bar {
     constructor(name) {
         this.name = name;
     }
@@ -21,15 +17,3 @@ class Bar {
         return strings[pickOneOutOfThree()];
     }
 }
-
-class BarMock {
-    constructor(name) {
-        this.name = name;
-    }
-
-    get welcomeString() {
-        return 'Welcome';
-    }
-}
-
-export default stub(Bar, BarMock);

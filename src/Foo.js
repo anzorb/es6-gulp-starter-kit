@@ -1,26 +1,21 @@
+import 'babel-polyfill';
 import Bar from './Bar';
-import { stub } from 'mocktail';
+import { getSomethingFromServer } from './Utils';
 
 /**
  * Class Foo. Does things
  * @param {String} name
  */
 
-class Foo extends Bar {
+export default class Foo extends Bar {
+
     /**
-     * Draws the inside part of the opening (the door itself, transparent window, etc)
-     * @private
-     * @returns {THREE.Mesh}
+     * Wait for server, and greet
+     * @returns {Promise}
      */
     greet() {
-        return `hi, ${this.name}! ${this.welcomeString}`;
+        return getSomethingFromServer()
+            .then((response) => `hi, ${this.name}! ${this.welcomeString} to ${response}`);
     }
-}
 
-class FooMock extends Bar {
-    greet() {
-        return `hi, ${this.name}! Welcome`;
-    }
 }
-
-export default stub(Foo, FooMock);

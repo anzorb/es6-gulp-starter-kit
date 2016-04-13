@@ -6,7 +6,8 @@ module.exports = function(config) {
             debug: true,
             transform: [
                 ['babelify', {
-                    presets: ['es2015']
+                    presets: ['es2015'],
+                    plugins: ['rewire']
                 }]
             ]
         },

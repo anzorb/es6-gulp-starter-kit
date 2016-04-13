@@ -1,11 +1,18 @@
 <?xml version="1.0"?>
-<testsuite name="PhantomJS 2.1.1 (Mac OS X 0.0.0)" package="design-center-js" timestamp="2016-04-13T18:25:05" id="0" hostname="ip-172-16-1-6.us-west-2.compute.internal" tests="3" errors="0" failures="0" time="0.002">
+<testsuite name="PhantomJS 2.1.1 (Mac OS X 0.0.0)" package="design-center-js" timestamp="2016-04-15T18:19:45" id="0" hostname="ip-172-16-1-50.us-west-2.compute.internal" tests="3" errors="0" failures="1" time="0.038">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
   </properties>
-  <testcase name="Bar should initialize and set its name" time="0.002" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).design-center-js.Bar"/>
-  <testcase name="Bar api should return one of 3 strings" time="0" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).design-center-js.Bar"/>
-  <testcase name="Foo api should greet" time="0" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).design-center-js.Foo"/>
+  <testcase name="Bar should initialize and set its name" time="0.032" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).design-center-js.Bar"/>
+  <testcase name="Bar api should return one of 3 strings" time="0.002" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).design-center-js.Bar"/>
+  <testcase name="Foo api should greet" time="0.004" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).design-center-js.Foo">
+    <failure type="">TypeError: undefined is not a constructor (evaluating '_Foo2.default.__Rewire__') in /var/folders/z6/p2s6fbtj2116w72j9d52m_3m0000gq/T/02141d31f4bf4a62db077c2ca06e6e57.browserify (line 6741)
+/var/folders/z6/p2s6fbtj2116w72j9d52m_3m0000gq/T/02141d31f4bf4a62db077c2ca06e6e57.browserify:6741:108 &lt;- ../src/Foo.spec.js:9:929
+</failure>
+    <failure type="">TypeError: undefined is not an object (evaluating 'foo.greet') in /var/folders/z6/p2s6fbtj2116w72j9d52m_3m0000gq/T/02141d31f4bf4a62db077c2ca06e6e57.browserify (line 6750)
+/var/folders/z6/p2s6fbtj2116w72j9d52m_3m0000gq/T/02141d31f4bf4a62db077c2ca06e6e57.browserify:6750:90 &lt;- ../src/Foo.spec.js:9:1746
+</failure>
+  </testcase>
   <system-out>
     <![CDATA[
 ]]>
