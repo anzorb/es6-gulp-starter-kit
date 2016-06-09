@@ -11,7 +11,8 @@ module.exports = function(config) {
                     instrumenter: isparta,
                     instrumenterConfig: {
                         babel: {
-                            presets: ['es2015']
+                            presets: ['es2015'],
+                            plugins: ['rewire']
                         }
                     },
                     ignore: ['../**/node_modules/**', '../**/*.spec.js', '../tests/index.js']
@@ -24,8 +25,12 @@ module.exports = function(config) {
         reporters: ['progress', 'coverage', 'junit'],
         coverageReporter: {
             dir: '../coverage',
-            type: 'cobertura',
-            includeAllSources: true
+            includeAllSources: true,
+            reporters: [{
+                type: 'cobertura'
+            }, {
+                type: 'html'
+            }]
         },
         singleRun: true,
         logLevel: config.LOG_INFO,

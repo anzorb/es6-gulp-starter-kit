@@ -20,4 +20,3 @@ This starter-kit includes everything you need to write ES6 code, along with test
 ##### Issues
 
 1. gulp-esdoc blows up due to https://github.com/nanopx/gulp-esdoc/issues/4, so it was commented out of the gulpfile until it's fixed. Use npm run docs instead
-2. karma:ci fails when using babel-plugin-rewire and running in Phantomjs (https://github.com/speedskater/babel-plugin-rewire/issues/109)
